@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Contact | Gabriel Pendleton - Interactive Developer, Front End Programmer, UX Design Junkie, and Game Designer</title>
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans|Oswald:400,300' rel='stylesheet' type='text/css'>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta name="description" content="User Interface Programmer and UX Design junkie, Front End Programmer, Game Designer.">
+	<link rel="shortcut icon" href="img/favicon.ico">
+
+	<script>
+		function validateForm()
+		{
+			var y=document.forms["myForm"]["Name"].value;
+			var x=document.forms["myForm"]["Email"].value;
+			var z=document.forms["myForm"]["Message"].value;
+			var atpos=x.indexOf("@");
+			var dotpos=x.lastIndexOf(".");
+
+			if (y==null || y=="")
+			 {
+				alert("Please Enter Your Name");
+				return false;
+			}
+
+			if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+			 {
+				alert("Please Enter Your Email");
+				return false;
+			}
+			
+
+			if (z==null || z=="")
+			 {
+				alert("Please Enter Message");
+				return false;
+			}
+		}
+	</script>
+</head>
+	<body>
+		<div class="black_bar shadowAffect">
+		<div class="nav_container shawdowAffect">
+			<ul id="list-nav">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html" >About</a></li>
+				<li><a href="resume.html" >Resume</a></li>
+				<li><a href="projects.html" >Projects</a></li>
+				<li><a href="speaking.html" >Speaking</a></li>
+				<li><a href="contact.html" class="currentPage">Contact</a></li>
+			</ul>  
+			<ul id="social">
+				<li><a href="http://www.linkedin.com/in/gpendleton" title="Connect on LinkedIn"><img src="img/linkedIn.png" width="32" height="32" alt="linkedin" ></a></li>
+				<li><a href="docs/gabriel_pendleton_new.pdf" title="Download Resume"><img src="img/resume.png" width="32" height="32" alt="resume" ></a></li>
+				<li><a href="https://twitter.com/GabeTHEGeek" title="Follow @GabeTHEGeek"><img src="img/twitter.png" width="32" height="32" alt="twitter" ></a></li>
+				<li><a href="mailto:pendletongabriel@gmail.com?Subject=Hello%20Gabriel" title="Contact Me"><img src="img/mail.png" width="32" height="32" alt="email" ></a></li>
+			</ul>
+		</div><!--THIS ENDS content_container-->
+		</div><!--THIS ENDS back_bar-->	
+
+	<div id="content_wrapper">
+		<div id="page-wrap">
+		<p>I'm always near a point of contact either by phone, email or carrier pigeon. If my current work load is minimal, expect my response within one business day.<p>
+			
+
+		<div id="contact-area">
+			<form name="myForm" form method="post" action="contactengine.php" onsubmit="return validateForm();">
+				<label for="Name">Name:</label>
+				<input type="text" name="Name" id="Name" />
+				
+				<label for="Company">Company:</label>
+				<input type="text" name="Company" id="Company" />
+	
+				<label for="Email">Email:</label>
+				<input type="text" name="Email" id="Email" />
+				
+				<label for="Message">Message:</label><br />
+				<textarea name="Message" rows="20" cols="20" id="Message"></textarea>
+
+				<input type="submit" name="submit" value="Submit" class="submit-button" />
+			</form>
+			
+			<div style="clear: both;"></div>	
+		</div>
+	
+	</div>
+		</div>
+	</div><!--THIS ENDS WRAPPER-->
+
+		<div class="black_bar">
+		<div id="footer" class="nav_container">
+			<ul class="box">
+			<li><div id="twitter">
+				<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+				<script>
+				new TWTR.Widget({
+				  version: 2,
+				  type: 'profile',
+				  rpp: 1,
+				  interval: 30000,
+				  width: 250,
+				  height: 150,
+				  theme: {
+				    shell: {
+				      background: '#333333',
+				      color: '#ffffff'
+				    },
+				    tweets: {
+				      background: '#333333',
+				      color: '#ffffff',
+				      links: '#00a8f0'
+				    }
+				  },
+				  features: {
+				    scrollbar: false,
+				    loop: false,
+				    live: false,
+				    behavior: 'all'
+				  }
+				}).render().setUser('GabeTHEGeek').start();
+				</script></div>
+			</li>
+			  <li><img src="img/pStone.jpg" 	width="250" height="150" alt="Pudding Stone"></li>
+			  <li><img src="img/baltimoregamer.jpg" width="250" height="150" alt="BaltimoreGamer"></li>
+			</ul>
+		
+		</div>
+		</div>
+	</body><!--THIS ENDS BODY-->
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-39186213-1']);
+  _gaq.push(['_setDomainName', 'gabrielpendleton.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</html>
